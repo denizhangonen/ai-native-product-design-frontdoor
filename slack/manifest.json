@@ -1,0 +1,27 @@
+{
+  "display_information": {
+    "name": "Frontdoor",
+    "description": "A front door for spending. Ask in #purchasing, get an answer.",
+    "background_color": "#1f2933"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "Frontdoor",
+      "always_online": false
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["channels:history", "chat:write", "users:read", "channels:read"]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://ai-native-frontdoor.vercel.app/api/slack/events",
+      "bot_events": ["message.channels"]
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
